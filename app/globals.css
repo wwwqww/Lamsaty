@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --ink: #17211f;
+  --muted: #64736f;
+  --paper: #f7f8f5;
+  --brand: #0f766e;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; background: var(--paper); }
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, textarea, select { font: inherit; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.profile-classic { background: #f8faf8; color: #17211f; }
+.profile-modern { background: #fff; color: #17211f; }
+.profile-dark { background: #101918; color: #f3f6f3; }
+.profile-dark .muted { color: #aab8b3; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+.stats-bars { grid-template-columns: repeat(30, minmax(0, 1fr)); }
